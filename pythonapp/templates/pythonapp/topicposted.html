@@ -1,0 +1,16 @@
+{% extends 'pythonapp/index.html' %} 
+
+{% block title %}
+<title>Topic Posted</title>
+{% endblock %} 
+
+{% block main %} 
+
+<h1>TY TOPIC POSTED</h1>
+<p>TOPIC: {{data.topic}}</p>
+<p>INFO: {{data.text}}</p>
+<button>
+    <a href="{% url 'home' %}">back</a>
+</button>
+
+{% endblock %}

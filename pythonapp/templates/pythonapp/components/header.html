@@ -1,0 +1,19 @@
+<header>
+  <a href="{% url 'home' %}">
+    <h1>idc</h1>
+  </a>
+  {% include 'pythonapp/search_input.html' %}
+  <nav>
+    <ul>
+      <a href="{% url 'contact' %}">
+        <li>Contact Us</li>
+      </a>
+      <a href="{% url 'topic' %}">
+        <li>Topic</li>
+      </a>
+      <a href="{% url 'topics' %}">
+        <li>Show Topics</li>
+      </a>
+    </ul>
+  </nav>
+</header>

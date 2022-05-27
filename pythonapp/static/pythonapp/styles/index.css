@@ -1,0 +1,40 @@
+* {
+  text-decoration: none;
+}
+a {
+  color: black;
+}
+body {
+  margin: 0;
+  text-transform: capitalize;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.cards {
+  border: 3px double black;
+  padding: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: darkgray;
+  padding: 0 2rem;
+}
+ul {
+  display: flex;
+}
+li {
+  margin: 0 1rem;
+}
+.contactForm{
+  width: 50%;
+  margin: auto;
+}
+.contactForm label {
+  display: block;
+}
