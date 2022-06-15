@@ -1,19 +1,21 @@
 <header>
-  <a href="{% url 'home' %}">
-    <h1>idc</h1>
+  <a href="/home">
+    <h1>To-Do-List</h1>
   </a>
-  {% include 'pythonapp/search_input.html' %}
   <nav>
     <ul>
-      <a href="{% url 'contact' %}">
-        <li>Contact Us</li>
+      <a href="#about">
+        <li>About Us</li>
       </a>
-      <a href="{% url 'topic' %}">
-        <li>Topic</li>
+      {% if user.is_authenticated %}
+      <a href="{% url 'pythonapp:user-logout' %}">
+        <li>LOGOUT</li>
       </a>
-      <a href="{% url 'topics' %}">
-        <li>Show Topics</li>
+      {% else %}
+      <a href="{% url 'pythonapp:user-login' %}">
+        <li>LOGIN</li>
       </a>
+      {% endif %}
     </ul>
   </nav>
 </header>

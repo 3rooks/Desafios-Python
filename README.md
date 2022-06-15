@@ -1,11 +1,28 @@
-# Project "Django" Python 
+- Steps To Run The Project
 
->1. Clone Project 
->2. Open Folder
->3. Run Script
-### `python  manage.py runserver`
-Open [http://localhost:8000](http://localhost:8000) to view it in the browser.
+> 1: Clone Project
+```bash
+git clone "https://github.com/3rooks/Desafios-Python"
+```
+> 2: Run Scripts
+```bash
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+```
+> 3: Open Browser
 
-## Development In Progress...
-**-Input Search - Contact Form - Post Topic Form - Views - Templates...**
+Open [http://localhost:8000](http://localhost:8000)
 
+> 4: Create User
+```
+Example:
+username: qwerty
+email: qwerty@qwerty.com
+pass: ama4xu6EVnDRzunSPPQx
+```
+
+> 5: Enjoy The App
+
+- Preview Of The Project
+[https://drive.google.com/file/d/1zx0OqLS5Nf0DsfunegoAzTa5mhYoF971/view?usp=sharing](Video)

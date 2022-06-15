@@ -1,0 +1,12 @@
+{% extends 'pythonapp/components/topic_detail.html' %} {% block changes %}
+<div class="deleteTopic">
+  <h3>Are you sure delete: "{{topic.title}}"---</h3>
+  <form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Yes" />
+    <button>
+      <a href="{% url 'pythonapp:topic-detail' topic.id %}">Cancel</a>
+    </button>
+  </form>
+</div>
+{% endblock %}

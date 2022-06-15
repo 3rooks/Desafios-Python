@@ -1,0 +1,17 @@
+{% extends 'pythonapp/index.html' %} {% block main %} {% if not search %}
+<h2>Not Found</h2>
+{% else %} {% for item in search %}
+<div>
+  <div class="flex-item">
+    <p class="text-between">
+      <span>Title: {{item.title}}</span>
+      <span>Posted: {{item.created}}</span>
+    </p>
+    <p class="text">>> {{item.text}}</p>
+    <button>
+      <a href="{% url 'pythonapp:topic-detail' item.id %}">See More...</a>
+    </button>
+    <p class="text-id">User: "{{user}}" > {{item.id}}</p>
+  </div>
+</div>
+{% endfor %} {% endif %} {% endblock %}

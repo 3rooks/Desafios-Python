@@ -1,0 +1,29 @@
+{% extends 'pythonapp/index.html' %} {% block title%}
+<title>5chan/ {{topic.title}}</title>
+{% endblock %} {% block main %}
+
+<div class="flex-item">
+  <p class="text-between">
+    <span>Title: {{topic.title}}</span>
+    <span>Posted: {{topic.created}}</span>
+  </p>
+  <p>>> {{topic.text}}</p>
+  <p class="text-id">User: "{{user}}" > {{topic.id}}</p>
+  <div class="detailBtns">
+    <button>
+      <a href="{% url 'pythonapp:topic-list' %}">Back</a>
+    </button>
+    <hr />
+    <button>
+      <a href="{% url 'pythonapp:topic-update' topic.id %}">Edit</a>
+    </button>
+    <button>
+      <a href="{% url 'pythonapp:topic-delete' topic.id %}">Delete</a>
+    </button>
+  </div>
+  <hr>
+</div>
+
+{% block changes %}
+<!-- EDIT / CONFIRM DELETE -->
+{% endblock %} {% endblock %}

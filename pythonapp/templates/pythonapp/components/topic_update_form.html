@@ -1,0 +1,15 @@
+{% extends 'pythonapp/components/topic_detail.html' %} 
+{% block changes %}
+<div class="updateTopic">
+  <form action="" method="POST">
+    {% csrf_token %}
+    <table>
+      {{form.as_table}}
+    </table>
+    <input type="submit" value="Save Changes" />
+    <button>
+      <a href="{% url 'pythonapp:topic-detail' topic.id %}">Cancel</a>
+    </button>
+  </form>
+</div>
+{% endblock %}

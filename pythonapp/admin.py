@@ -1,9 +1,7 @@
 from django.contrib import admin
 
-from pythonapp.models import Family, Topic, Contact
+from pythonapp.models import Topic
 
 # Register your models here.
 
-admin.site.register(Family)
 admin.site.register(Topic)
-admin.site.register(Contact)

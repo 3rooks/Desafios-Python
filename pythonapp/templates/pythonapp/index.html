@@ -1,7 +1,7 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {% load static %}
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,22 +11,24 @@
       type="image/x-icon"
     />
     {% block title %}
-    <title>Home</title>
+    <title>TODO</title>
     {% endblock %}
-    <link rel="stylesheet" href="{% static 'pythonapp/styles/index.css' %}">
+    <link rel="stylesheet" href="{% static 'pythonapp/styles/index.css' %}" />
+    <script src="{% static 'pythonapp/scripts/index.js' %}" defer></script>
   </head>
   <body>
-    {% include 'pythonapp/components/header.html' %} {% block main %}
-    <h1>Simpson Family: {{characters|length}}</h1>
-    <div class="wrapper">
-      {% for character in characters %}
-      <div class="cards">
-        <p><b>Name:</b> {{character.name}} {{character.surname}}</p>
-        <p><b>Email:</b> {{character.email}}</p>
-        <p><b>Date:</b> {{character.born}}</p>
-      </div>
-      {% endfor %} {% endblock %}
-    </div>
+    <!-- HEADER -->
+    {% include 'pythonapp/components/header.html' %}
+    <!-- END HEADER -->
+    <!-- MAIN -->
+    <main>
+      {% block main %}
+      <!-- Magic Happens Here -->
+      {% endblock %}
+    </main>
+    <!--END MAIN  -->
+    <!-- FOOTER -->
     {% include 'pythonapp/components/footer.html' %}
+    <!-- END FOOTER -->
   </body>
 </html>

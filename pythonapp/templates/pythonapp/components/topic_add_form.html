@@ -1,0 +1,16 @@
+{% extends 'pythonapp/index.html' %} {% block main %}
+<div class="topicAdd">
+  <form action="" method="POST">
+    {% csrf_token %}
+    <table>
+      {{form.as_table}}
+    </table>
+    <hr />
+    <input type="submit" value="Post" />
+    <button>
+      <a href="{% url 'pythonapp:topic-list' %}">Back</a>
+    </button>
+    <hr />
+  </form>
+</div>
+{% endblock %}
